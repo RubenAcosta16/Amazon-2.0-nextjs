@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
-import Currency from "react-currency-formatter";
+// import Currency from "react-currency-formatter";
 
 const MaxRating = 5;
 const MinRating = 1;
