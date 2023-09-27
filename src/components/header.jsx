@@ -24,7 +24,7 @@ const Header = () => {
                     <p className='font-extrabold md:text-sm'>Hello Account & Lists</p>
                 </div>
 
-                <div className='link'>
+                <div className='link hidden md:inline'>
                     <p>Returns</p>
                     <p className='font-extrabold md:text-sm'>& Orders</p>
                 </div>
