@@ -12,7 +12,7 @@ Run commands
 2) ```npm run dev```
 
 
-## Or using yarn
+<!-- ## Or using yarn
 
 Run commands 
 
@@ -20,7 +20,7 @@ Run commands
 
 2) ```yarn install```
 
-3) ```yarn run dev```
+3) ```yarn run dev``` -->
 
 
 ### If you see the window below then you are set to build AMAZON 2.0!
