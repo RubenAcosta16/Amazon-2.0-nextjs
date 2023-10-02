@@ -10,7 +10,8 @@ export default function checkout() {
   const items = useSelector(selectItems);
   const total=useSelector(selectTotal)
 
-  const session=useSession()
+  const {session}=useSession()
+  
   return (
     <div className="">
       <Header></Header>
@@ -57,3 +58,4 @@ export default function checkout() {
     </div>
   );
 }
+// 3:15:59
