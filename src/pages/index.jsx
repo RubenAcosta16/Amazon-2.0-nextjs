@@ -4,7 +4,12 @@ import Header from "../components/header";
 import Banner from '../components/Banner'
 import ProductFeed from '../components/ProductFeed'
 
+// import {signIn,signOut,useSession} from 'next-auth/react'
+
 export default function Home({products}) {
+
+
+
   return (
     <div className="bg-gray-100 w-full">
       <Head>

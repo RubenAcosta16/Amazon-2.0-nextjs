@@ -1,16 +1,27 @@
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
+import { useDispatch } from "react-redux";
+import { addToBasket } from "../slices/basketSlice";
 // import Currency from "react-currency-formatter";
 
 const MaxRating = 5;
 const MinRating = 1;
 
 function Product({ product }) {
+  const dispatch = useDispatch();
+
   const { id, title, price, description, category, image } = product;
 
   const rating = Math.floor(
     Math.random() * (MaxRating - MinRating + 1) + MinRating
   );
+
+  function addItemToBasket() {
+    const product = { id, title, price, description, category, image,hasPrime, rating };
+
+    // send the product as an action to redux store, basket
+    dispatch(addToBasket(product))
+  }
 
   const hasPrime = Math.random() < 0.5;
   return (
@@ -30,10 +41,14 @@ function Product({ product }) {
         {Array(rating)
           .fill()
           .map((_, i) => (
-            <StarIcon className="h-5 text-yellow-500"></StarIcon>
+            <div>
+              <StarIcon className="h-5 text-yellow-500"></StarIcon>
+            </div>
           ))}
       </div>
 
+
+    {/* creo que el line-clamp es para que solo se vean esas lineas de todo un texto largote */}
       <p className="text- my-2 line-clamp-2">{description}</p>
 
       <div className="m-2 ">
@@ -51,7 +66,9 @@ function Product({ product }) {
         </div>
       )}
 
-      <button className="mt-auto button">Add to Basket</button>
+      <button onClick={addItemToBasket} className="mt-auto button">
+        Add to Basket
+      </button>
     </div>
   );
 }
