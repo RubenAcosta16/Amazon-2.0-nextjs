@@ -1,6 +1,7 @@
 {
   "name": "with-redux-toolkit",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -9,7 +10,9 @@
   "dependencies": {
     "@heroicons/react": "^1.0.0",
     "@reduxjs/toolkit": "^1.9.6",
+    "@stripe/stripe-js": "^2.1.7",
     "@tailwindcss/line-clamp": "^0.2.0",
+    "axios": "^1.5.1",
     "firebase": "^8.10.1",
     "firebase-admin": "^11.10.1",
     "next": "^13.5.3",
@@ -17,8 +20,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
-    "react-responsive-carousel": "^3.2.23"
-  }, 
+    "react-responsive-carousel": "^3.2.23",
+    "stripe": "^13.8.0"
+  },
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.2.5",
